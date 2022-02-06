@@ -4,17 +4,58 @@
 Home Page
 {% endblock %}
 
+
+{% block nav %}
+  
+  <p class="m-1" style="margin-right: 10px;">
+    Username
+  </p>
+
+  <button style="border: 0px;">
+    Logout
+  </button>
+
+
+{% endblock %}
+
 {% block body %}
-<div class="">
-    <div class="row align-items-start text-light">
-      <div class="col p-3 m-3" style="background: blue; width: 100%;">
-        One of three columns
-      </div>
-      <div class="col p-3 m-3" style="background: blue; width: 100%;">
-        One of three columns
-      </div>
-      <div class="col p-3 m-3" style="background: blue; width: 100%;">
-        One of three columns
-      </div>
+<div>
+
+  <div class="row align-items-start text-dark">
+    <div class="col p-3" style="background: lightblue;">
+      One of three columns
     </div>
+    <div class="col p-3" style="background: orange;">
+      One of three columns
+    </div>
+    <div class="col p-3" style="background: lightgreen;">
+      One of three columns
+    </div>
+  </div>
+
+  <div class="row align-items-start text-dark">
+    <div class="col p-3" style="background: orange;">
+      One of three columns
+    </div>
+    <div class="col p-3" style="background: lightgreen;">
+      One of three columns
+    </div>
+    <div class="col p-3" style="background: lightblue;">
+      One of three columns
+    </div>
+  </div>
+
+  <div class="row align-items-start text-dark">
+    <div class="col p-3" style="background: lightgreen;">
+      One of three columns
+    </div>
+    <div class="col p-3" style="background: lightblue;">
+      One of three columns
+    </div>
+    <div class="col p-3" style="background: orange;">
+      One of three columns
+    </div>
+  </div>
+
+</div>
 {% endblock %}
