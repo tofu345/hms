@@ -1,59 +1,84 @@
 {% extends 'core/layout.html' %}
 
 {% block title %}
-Home Page
+Home - HMS
 {% endblock %}
-
 
 {% block nav %}
   
-  <p class="m-1" style="margin-right: 10px;">
-    Username
-  </p>
+  {% if request.user.is_authenticated %}
 
-  <button style="border: 0px;">
-    Logout
-  </button>
+  <form method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Logout" name="logout" class="btn p-1" style="margin-right: 10px;">
+  </form>
 
+  {% else %}
+
+  <a href="{% url 'HMS:login' %}">
+    <button class="btn p-1" style="margin-right: 5px;">
+      Login
+    </button>
+  </a>  
+
+  <a href="{% url 'HMS:signup' %}">
+    <button class="btn p-1" style="margin-right: 5px;">
+      Signup
+    </button>
+  </a>  
+
+  {% endif %}
 
 {% endblock %}
 
 {% block body %}
-<div>
+<style>
+  .column {
+    padding: 15px;
+    margin: 5px;
+    background: lightgrey;
+  }
+</style>
 
-  <div class="row align-items-start text-dark">
-    <div class="col p-3" style="background: lightblue;">
-      One of three columns
+<h3 style="font-size: 22px; margin-top: 15px; margin-left: 15px;">
+  Dashboard
+</h3>
+
+<div class="text-dark" style="padding-left: 20px; padding-right: 20px;">
+
+  <div class="row">
+    <div class="column col" style="background: lightblue;">
+      There are {{ rooms|length }} Rooms.
     </div>
-    <div class="col p-3" style="background: orange;">
-      One of three columns
+    <div class="column col" style="background: orange;">
+      Column
     </div>
-    <div class="col p-3" style="background: lightgreen;">
-      One of three columns
+    <div class="column col" style="background: lightgreen;">
+      Column
     </div>
   </div>
 
-  <div class="row align-items-start text-dark">
-    <div class="col p-3" style="background: orange;">
-      One of three columns
+  <div class="row">
+    <div class="column col" style="background: orange;">
+      Column
     </div>
-    <div class="col p-3" style="background: lightgreen;">
-      One of three columns
+    <div class="column col" style="background: lightgreen;">
+      Column
     </div>
-    <div class="col p-3" style="background: lightblue;">
-      One of three columns
+    <div class="column col" style="background: lightblue;">
+      Column
     </div>
   </div>
 
-  <div class="row align-items-start text-dark">
-    <div class="col p-3" style="background: lightgreen;">
-      One of three columns
+  <div class="row">
+    <div class="column col" style="background: lightgreen;">
+      Column
     </div>
-    <div class="col p-3" style="background: lightblue;">
-      One of three columns
+    <div class="column col" style="background: lightblue;">
+      Column
     </div>
-    <div class="col p-3" style="background: orange;">
-      One of three columns
+    <div class="column col" style="background: orange;">
+      Column
     </div>
   </div>
 
