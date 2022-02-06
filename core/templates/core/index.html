@@ -34,7 +34,7 @@ Home - HMS
 {% block body %}
 <style>
   .column {
-    padding: 15px;
+    padding: 25px;
     margin: 5px;
     background: lightgrey;
   }
@@ -47,40 +47,49 @@ Home - HMS
 <div class="text-dark" style="padding-left: 20px; padding-right: 20px;">
 
   <div class="row">
-    <div class="column col" style="background: lightblue;">
+    <div class="column col-md-4" style="background: lightblue;">
       There are {{ rooms|length }} Rooms.
     </div>
     <div class="column col" style="background: orange;">
       Column
     </div>
-    <div class="column col" style="background: lightgreen;">
+    <div class="column col-md-4" style="background: lightgreen;">
       Column
     </div>
   </div>
 
   <div class="row">
-    <div class="column col" style="background: orange;">
+    <div class="column col-md-4" style="background: orange;">
       Column
     </div>
     <div class="column col" style="background: lightgreen;">
       Column
     </div>
-    <div class="column col" style="background: lightblue;">
+    <div class="column col-md-4" style="background: lightblue;">
       Column
     </div>
   </div>
 
   <div class="row">
-    <div class="column col" style="background: lightgreen;">
+    <div class="column col-md-4" style="background: lightgreen;">
       Column
     </div>
     <div class="column col" style="background: lightblue;">
       Column
     </div>
-    <div class="column col" style="background: orange;">
+    <div class="column col-md-4" style="background: orange;">
       Column
     </div>
   </div>
+
+  <div class="row">
+    <div class="col column" style="background: lightgrey;">
+      Bookings
+    </div>
+    <div class="col-md-4 column" style="background: lightgreen;">
+      Occupancy status
+    </div>
+  </div> 
 
 </div>
 {% endblock %}
